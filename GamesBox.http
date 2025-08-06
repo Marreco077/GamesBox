@@ -1,0 +1,6 @@
+@GamesBox_HostAddress = http://localhost:5115
+
+GET {{GamesBox_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
