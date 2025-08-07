@@ -8,15 +8,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26851b84-774f-421c-9dcf-5670d2ca938e" name="Changes" comment="" />
+    <list default="true" id="26851b84-774f-421c-9dcf-5670d2ca938e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GamesBox/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GamesBox/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/GamesBoxContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/GamesBoxDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/GameReview.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/GameReview.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Marreco077 &lt;marcelodev77@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Marreco077&quot;
+  }
+}</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Marreco077/GamesBox.git&quot;,
@@ -93,7 +109,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1754517745752</updated>
-      <workItem from="1754517747786" duration="3576000" />
+      <workItem from="1754517747786" duration="3978000" />
+      <workItem from="1754603873750" duration="1511000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -103,7 +120,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754521292897</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="first commit">
+      <option name="closed" value="true" />
+      <created>1754521361833</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1754521361833</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
