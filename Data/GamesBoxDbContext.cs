@@ -20,29 +20,38 @@ public class GamesBoxDbContext : DbContext
 
         builder.Entity<Game>(entity =>
         {   
-            entity.Property(e => e.Name).IsRequired().HasMaxLength(250);
-            entity.Property(e => e.Summary).IsRequired().HasMaxLength(2000);
-            entity.Property(e => e.Director).IsRequired().HasMaxLength(250);
-            entity.Property(e => e.Writers).HasMaxLength(250);
-            entity.Property(e => e.Company).HasMaxLength(200);
+            // ID auto configured -- EF does that
+            entity.Property(g => g.Name).IsRequired().HasMaxLength(250);
+            entity.Property(g => g.Summary).IsRequired().HasMaxLength(2000);
+            entity.Property(g => g.Date).IsRequired();
+            entity.Property(g => g.Score).IsRequired().HasPrecision(3, 1);
+            entity.Property(g => g.Director).IsRequired().HasMaxLength(250);
+            entity.Property(g => g.Writers).HasMaxLength(250);
+            entity.Property(g => g.Company).HasMaxLength(200);
         });
 
         builder.Entity<User>(entity =>
-        {
-            entity.Property(e => e.Name).IsRequired().HasMaxLength(250);
-            entity.Property(e => e.Email).IsRequired().HasMaxLength(320);
+        {   
+            // ID auto configured
+            entity.Property(u => u.Name).IsRequired().HasMaxLength(250);
+            entity.Property(u => u.Email).IsRequired().HasMaxLength(320);
+            entity.HasIndex(u => u.Email).IsUnique();
+            entity.Property(u => u.PasswordHash).IsRequired().HasMaxLength(100);
+            entity.Property(u => u.CreatedAt).IsRequired().HasDefaultValueSql("CURRENT_TIMESTAMP");
         });
 
         builder.Entity<GameReview>(entity =>
-        {
-            entity.Property(e => e.Score).IsRequired();
-            entity.Property(e => e.Finished).IsRequired();
-            entity.Property(e => e.Game).HasOne()
-            entity.Property(e => e.GameId).IsRequired();
-            entity.Property(e => e.Like).IsRequired();
-            entity.Property(e => e.Review).IsRequired().HasMaxLength(5000);
-            entity.Property(e => e.User).IsRequired();
-            entity.Property(e => e.UserId).IsRequired();
+        {   
+            // ID auto configured
+            entity.Property(r => r.Review).HasMaxLength(5000);
+            entity.Property(r => r.Score).IsRequired().HasPrecision(3, 1);
+            entity.Property(r => r.Like).IsRequired();
+            entity.Property(r => r.Finished).IsRequired();
+            entity.Property(r => r.CreatedAt).IsRequired().HasDefaultValueSql("CURRENT_TIMESTAMP");
+            
+            entity.HasOne(r => r.Game).WithMany().HasForeignKey(r => r.GameId).OnDelete(DeleteBehavior.Cascade);
+            entity.HasOne(r => r.User).WithMany().HasForeignKey(r => r.UserId).OnDelete(DeleteBehavior.Cascade);
+
         });
     }
 }
