@@ -3,10 +3,11 @@
 public class GameReview
 {   
     public Guid Id { get; set; }
-    public string Review { get; set; } = String.Empty;
-    public double Score { get; set; }
-    public bool Like { get; set; }
-    public bool Finished { get; set; }
+    public string? Review { get; set; }
+    public decimal Score { get; set; } // default 0.0m
+    public bool Like { get; set; } // set false
+    public bool Finished { get; set; } // set false
+    public DateTime CreatedAt { get; set; }
 
     public Guid GameId { get; set; } // FK
     public Game? Game { get; set; } // Navigation property
@@ -16,7 +17,7 @@ public class GameReview
     
     public GameReview () {}
 
-    public GameReview(string review, double score, bool like, bool finished, Guid gameId, Guid userId)
+    public GameReview(string review, decimal score, bool like, bool finished, Guid gameId, Guid userId)
     {
         Review = review;
         Score = score;
