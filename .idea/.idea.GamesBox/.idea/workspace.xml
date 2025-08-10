@@ -10,8 +10,12 @@
   <component name="ChangeListManager">
     <list default="true" id="26851b84-774f-421c-9dcf-5670d2ca938e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GamesBox/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GamesBox/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/GamesBoxContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/GamesBoxDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/GamesBoxDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/GamesBoxDbContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Entities/GameReview.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/GameReview.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GamesBox.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/GamesBox.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +114,11 @@
       <option name="presentableId" value="Default" />
       <updated>1754517745752</updated>
       <workItem from="1754517747786" duration="3978000" />
-      <workItem from="1754603873750" duration="1511000" />
+      <workItem from="1754603873750" duration="2327000" />
+      <workItem from="1754700353752" duration="3147000" />
+      <workItem from="1754757366951" duration="5104000" />
+      <workItem from="1754859377595" duration="2161000" />
+      <workItem from="1754861572178" duration="183000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />

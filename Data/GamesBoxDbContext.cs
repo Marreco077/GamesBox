@@ -37,7 +37,9 @@ public class GamesBoxDbContext : DbContext
             entity.Property(u => u.Email).IsRequired().HasMaxLength(320);
             entity.HasIndex(u => u.Email).IsUnique();
             entity.Property(u => u.PasswordHash).IsRequired().HasMaxLength(100);
-            entity.Property(u => u.CreatedAt).IsRequired().HasDefaultValueSql("CURRENT_TIMESTAMP");
+            entity.Property(u => u.CreatedAt)
+                .HasColumnType("datetime(6)")
+                .IsRequired();
         });
 
         builder.Entity<GameReview>(entity =>
@@ -47,11 +49,12 @@ public class GamesBoxDbContext : DbContext
             entity.Property(r => r.Score).IsRequired().HasPrecision(3, 1);
             entity.Property(r => r.Like).IsRequired();
             entity.Property(r => r.Finished).IsRequired();
-            entity.Property(r => r.CreatedAt).IsRequired().HasDefaultValueSql("CURRENT_TIMESTAMP");
-            
+            entity.Property(r => r.CreatedAt)
+                .HasColumnType("datetime(6)")
+                .IsRequired();
+    
             entity.HasOne(r => r.Game).WithMany().HasForeignKey(r => r.GameId).OnDelete(DeleteBehavior.Cascade);
             entity.HasOne(r => r.User).WithMany().HasForeignKey(r => r.UserId).OnDelete(DeleteBehavior.Cascade);
-
         });
     }
 }

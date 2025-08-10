@@ -16,5 +16,6 @@ public class User
         Name = name;
         Email = email;
         PasswordHash = password;
+        CreatedAt = DateTime.UtcNow;
     }
 }

@@ -25,5 +25,6 @@ public class GameReview
         Finished = finished;
         GameId = gameId;
         UserId = userId;
+        CreatedAt = DateTime.UtcNow;
     }
 }
